@@ -4,7 +4,7 @@ const delay = async (ms: number) => new Promise(res => setTimeout(res, ms));
 
 async function main(): Promise<void> {
   console.log("Deploy YokaiChain");
-  const YokaiSpecialFactory = await hre.ethers.getContractFactory("YokaiSpecial");
+  const YokaiSpecialFactory = await hre.ethers.getContractFactory("YokaiHeroes");
   const YokaiSpecial = await YokaiSpecialFactory.deploy();
 
   await YokaiSpecial.deployed();

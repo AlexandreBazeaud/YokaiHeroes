@@ -16,7 +16,7 @@ describe("Unit tests", function () {
 
   describe("Test", function () {
     beforeEach(async function () {
-      const YokaiSpecialFactory = await hre.ethers.getContractFactory("YokaiSpecial");
+      const YokaiSpecialFactory = await hre.ethers.getContractFactory("YokaiHeroes");
       this.YokaiChain = await YokaiSpecialFactory.deploy();
 
       const YokaiEcologistDescriptorFactory = await hre.ethers.getContractFactory("YokaiEcologistDescriptor");

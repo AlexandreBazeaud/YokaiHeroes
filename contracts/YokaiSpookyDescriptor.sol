@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 pragma abicoder v2;
 
 import "base64-sol/base64.sol";
-import "./interfaces/IYokaiSpecialDescriptor.sol";
+import "./interfaces/IYokaiHeroesDescriptor.sol";
 
 /// @title Describes Yokai
 /// @notice Produces a string containing the data URI for a JSON metadata string
