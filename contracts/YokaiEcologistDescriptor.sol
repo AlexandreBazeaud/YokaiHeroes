@@ -43,7 +43,7 @@ contract YokaiEcologistDescriptor is IYokaiChainDescriptor {
     }
 
     function generateDescription() private pure returns (string memory){
-        return 'aaaa';
+        return 'Yokai x Ecologist';
     }
 
 }
