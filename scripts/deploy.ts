@@ -15,19 +15,6 @@ async function main(): Promise<void> {
 
   console.log("Deploy done");
 }
-async function deployLibrary(factory: any) {
-  let contract = await factory.deploy();
-  await contract.deployed();
-  await delay(60000);
-  await simpleEtherscan(contract.address);
-  return contract;
-}
-
-async function simpleEtherscan(addressDeployed: string) {
-  await hre.run("verify:verify", {
-    address: addressDeployed,
-  });
-}
 
 // We recommend this pattern to be able to use async/await everywhere and properly handle errors.
 main()

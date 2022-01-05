@@ -25,23 +25,23 @@ describe("Unit tests", function () {
       const YokaiSpookyDescriptorFactory = await hre.ethers.getContractFactory("YokaiSpookyDescriptor");
       this.YokaiSpookyDescriptor = await YokaiSpookyDescriptorFactory.deploy();
 
-      this.specialArray = [this.YokaiSpookyDescriptor.address,this.YokaiEcologistDescriptor.address];
+      this.specialArray = [this.YokaiSpookyDescriptor.address, this.YokaiEcologistDescriptor.address];
     });
 
-    it("Mint specific Item", async function () {
-      this.timeout(4000000);
-
-      let i = 1;
-      for(const special of this.specialArray){
-        await this.YokaiChain.create(special);
-        const nft = await this.YokaiChain.tokenURI(i);
-        const bufJson = Buffer.from(nft.substring(29), "base64");
-        const jsonObj = JSON.parse(bufJson.toString());
-        const bufSvg = Buffer.from(jsonObj.image.substring(26), "base64");
-        await fs.writeFileSync("yokais/"+jsonObj.name+".svg", bufSvg.toString());
-        i++;
-      }
-
-    });
+    // it("Mint specific Item", async function () {
+    //   this.timeout(4000000);
+    //
+    //   let i = 1;
+    //   for(const special of this.specialArray){
+    //     await this.YokaiChain.create(special);
+    //     const nft = await this.YokaiChain.tokenURI(i);
+    //     const bufJson = Buffer.from(nft.substring(29), "base64");
+    //     const jsonObj = JSON.parse(bufJson.toString());
+    //     const bufSvg = Buffer.from(jsonObj.image.substring(26), "base64");
+    //     await fs.writeFileSync("yokais/"+jsonObj.name+".svg", bufSvg.toString());
+    //     i++;
+    //   }
+    //
+    // });
   });
 });

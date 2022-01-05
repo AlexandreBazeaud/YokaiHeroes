@@ -3,14 +3,14 @@ import hre from "hardhat";
 const delay = async (ms: number) => new Promise(res => setTimeout(res, ms));
 
 async function main(): Promise<void> {
-  console.log("Deploy spooky descriptor");
-  const YokaiSpecialFactory = await hre.ethers.getContractFactory("YokaiSpookyDescriptor");
-  const YokaiSpecial = await YokaiSpecialFactory.deploy();
+  console.log("Deploy ecologist descriptor");
+  const YokaiEcologistDescriptorFactory = await hre.ethers.getContractFactory("YokaiEcologistDescriptor");
+  const YokaiEcologistDescriptor = await YokaiEcologistDescriptorFactory.deploy();
 
-  await YokaiSpecial.deployed();
+  await YokaiEcologistDescriptor.deployed();
   await delay(60000);
   await hre.run("verify:verify", {
-    address: YokaiSpecial.address,
+    address: YokaiEcologistDescriptor.address,
   });
 
   console.log("Deploy done");

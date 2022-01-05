@@ -3,14 +3,14 @@ import hre from "hardhat";
 const delay = async (ms: number) => new Promise(res => setTimeout(res, ms));
 
 async function main(): Promise<void> {
-  console.log("Deploy YokaiChain");
-  const YokaiSpecialFactory = await hre.ethers.getContractFactory("YokaiHeroes");
-  const YokaiSpecial = await YokaiSpecialFactory.deploy();
+  console.log("Deploy batcher");
+  const BatcherFactory = await hre.ethers.getContractFactory("ERC721Batcher");
+  const Batcher = await BatcherFactory.deploy();
 
-  await YokaiSpecial.deployed();
+  await Batcher.deployed();
   await delay(60000);
   await hre.run("verify:verify", {
-    address: YokaiSpecial.address,
+    address: Batcher.address,
   });
 
   console.log("Deploy done");
