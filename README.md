@@ -1,14 +1,14 @@
-# YokaiChain
+# YokaiHeroes
 
-On-chain generated anime NFTs
+On-chain generated anime NFTs for giveaway and special moment
 
 ## Deployments
 
-YokaiChain will be deployed on Fantom and verified on Ftmscan :
+YokaiHeroes will be deployed on Fantom and verified on Ftmscan :
 
-| Contracts | Explorer |
-| --------- | -------- |
-| soon      | soon     |
+| Contracts                                                                      | Explorer |
+| ------------------------------------------------------------------------------ | -------- |
+| [here](https://ftmscan.com/address/0x547a28460a332d193a1487f1d7b6dabcb15d423a) | soon     |
 
 ### Usage
 
